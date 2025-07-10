@@ -23,13 +23,6 @@ from teleop.image_server.image_client import ImageClient
 from teleop.utils.episode_writer import EpisodeWriter
 from sshkeyboard import listen_keyboard, stop_listening
 
-# for simulation
-from unitree_sdk2py.core.channel import ChannelPublisher
-from unitree_sdk2py.idl.std_msgs.msg.dds_ import String_
-def publish_reset_category(category: int,publisher): # Scene Reset signal
-    msg = String_(data=str(category))
-    publisher.Write(msg)
-    logger_mp.info(f"published reset category: {category}")
 
 # state transition
 start_signal = False
@@ -68,65 +61,30 @@ if __name__ == '__main__':
     args = parser.parse_args()
     logger_mp.info(f"args: {args}")
 
-    # image client: img_config should be the same as the configuration in image_server.py (of Robot's development computing unit)
-    if args.sim:
-        img_config = {
-            'fps': 30,
-            'head_camera_type': 'opencv',
-            'head_camera_image_shape': [480, 640],  # Head camera resolution
-            'head_camera_id_numbers': [0],
-            'wrist_camera_type': 'opencv',
-            'wrist_camera_image_shape': [480, 640],  # Wrist camera resolution
-            'wrist_camera_id_numbers': [2, 4],
-        }
-    else:
-        img_config = {
-            'fps': 30,
-            'head_camera_type': 'opencv',
-            'head_camera_image_shape': [480, 1280],  # Head camera resolution
-            'head_camera_id_numbers': [0],
-            'wrist_camera_type': 'opencv',
-            'wrist_camera_image_shape': [480, 640],  # Wrist camera resolution
-            'wrist_camera_id_numbers': [2, 4],
-        }
 
 
-    ASPECT_RATIO_THRESHOLD = 2.0 # If the aspect ratio exceeds this value, it is considered binocular
-    if len(img_config['head_camera_id_numbers']) > 1 or (img_config['head_camera_image_shape'][1] / img_config['head_camera_image_shape'][0] > ASPECT_RATIO_THRESHOLD):
-        BINOCULAR = True
-    else:
-        BINOCULAR = False
-    if 'wrist_camera_type' in img_config:
-        WRIST = True
-    else:
-        WRIST = False
-    
-    if BINOCULAR and not (img_config['head_camera_image_shape'][1] / img_config['head_camera_image_shape'][0] > ASPECT_RATIO_THRESHOLD):
-        tv_img_shape = (img_config['head_camera_image_shape'][0], img_config['head_camera_image_shape'][1] * 2, 3)
-    else:
-        tv_img_shape = (img_config['head_camera_image_shape'][0], img_config['head_camera_image_shape'][1], 3)
 
-    tv_img_shm = shared_memory.SharedMemory(create = True, size = np.prod(tv_img_shape) * np.uint8().itemsize)
-    tv_img_array = np.ndarray(tv_img_shape, dtype = np.uint8, buffer = tv_img_shm.buf)
+    # tv_img_shm = shared_memory.SharedMemory(create = True, size = np.prod(tv_img_shape) * np.uint8().itemsize)
+    # tv_img_array = np.ndarray(tv_img_shape, dtype = np.uint8, buffer = tv_img_shm.buf)
 
-    if WRIST and args.sim:
-        wrist_img_shape = (img_config['wrist_camera_image_shape'][0], img_config['wrist_camera_image_shape'][1] * 2, 3)
-        wrist_img_shm = shared_memory.SharedMemory(create = True, size = np.prod(wrist_img_shape) * np.uint8().itemsize)
-        wrist_img_array = np.ndarray(wrist_img_shape, dtype = np.uint8, buffer = wrist_img_shm.buf)
-        img_client = ImageClient(tv_img_shape = tv_img_shape, tv_img_shm_name = tv_img_shm.name, 
-                                 wrist_img_shape = wrist_img_shape, wrist_img_shm_name = wrist_img_shm.name, server_address="127.0.0.1")
-    elif WRIST and not args.sim:
-        wrist_img_shape = (img_config['wrist_camera_image_shape'][0], img_config['wrist_camera_image_shape'][1] * 2, 3)
-        wrist_img_shm = shared_memory.SharedMemory(create = True, size = np.prod(wrist_img_shape) * np.uint8().itemsize)
-        wrist_img_array = np.ndarray(wrist_img_shape, dtype = np.uint8, buffer = wrist_img_shm.buf)
-        img_client = ImageClient(tv_img_shape = tv_img_shape, tv_img_shm_name = tv_img_shm.name, 
-                                 wrist_img_shape = wrist_img_shape, wrist_img_shm_name = wrist_img_shm.name)
-    else:
-        img_client = ImageClient(tv_img_shape = tv_img_shape, tv_img_shm_name = tv_img_shm.name)
+    # if WRIST and args.sim:
+    #     wrist_img_shape = (img_config['wrist_camera_image_shape'][0], img_config['wrist_camera_image_shape'][1] * 2, 3)
+    #     wrist_img_shm = shared_memory.SharedMemory(create = True, size = np.prod(wrist_img_shape) * np.uint8().itemsize)
+    #     wrist_img_array = np.ndarray(wrist_img_shape, dtype = np.uint8, buffer = wrist_img_shm.buf)
+    #     img_client = ImageClient(tv_img_shape = tv_img_shape, tv_img_shm_name = tv_img_shm.name, 
+    #                              wrist_img_shape = wrist_img_shape, wrist_img_shm_name = wrist_img_shm.name, server_address="127.0.0.1")
+    # elif WRIST and not args.sim:
+    #     wrist_img_shape = (img_config['wrist_camera_image_shape'][0], img_config['wrist_camera_image_shape'][1] * 2, 3)
+    #     wrist_img_shm = shared_memory.SharedMemory(create = True, size = np.prod(wrist_img_shape) * np.uint8().itemsize)
+    #     wrist_img_array = np.ndarray(wrist_img_shape, dtype = np.uint8, buffer = wrist_img_shm.buf)
+    #     img_client = ImageClient(tv_img_shape = tv_img_shape, tv_img_shm_name = tv_img_shm.name, 
+    #                              wrist_img_shape = wrist_img_shape, wrist_img_shm_name = wrist_img_shm.name)
+    # else:
+    #     img_client = ImageClient(tv_img_shape = tv_img_shape, tv_img_shm_name = tv_img_shm.name)
 
-    image_receive_thread = threading.Thread(target = img_client.receive_process, daemon = True)
-    image_receive_thread.daemon = True
-    image_receive_thread.start()
+    # image_receive_thread = threading.Thread(target = img_client.receive_process, daemon = True)
+    # image_receive_thread.daemon = True
+    # image_receive_thread.start()
 
     # television: obtain hand pose data from the XR device and transmit the robot's head camera image to the XR device.
     tv_wrapper = TeleVuerWrapper(binocular=BINOCULAR, use_hand_tracking=args.xr_mode == 'hand', img_shape=tv_img_shape, img_shm_name=tv_img_shm.name, 
@@ -229,24 +187,24 @@ if __name__ == '__main__':
             #         if args.sim:
             #             publish_reset_category(1, reset_pose_publisher)
             # get input data
-            tele_data = tv_wrapper.get_motion_state_data()
-            if (args.ee == 'dex3' or args.ee == 'inspire1') and args.xr_mode == 'hand':
-                with left_hand_pos_array.get_lock():
-                    left_hand_pos_array[:] = tele_data.left_hand_pos.flatten()
-                with right_hand_pos_array.get_lock():
-                    right_hand_pos_array[:] = tele_data.right_hand_pos.flatten()
-            elif args.ee == 'gripper' and args.xr_mode == 'controller':
-                with left_gripper_value.get_lock():
-                    left_gripper_value.value = tele_data.left_trigger_value
-                with right_gripper_value.get_lock():
-                    right_gripper_value.value = tele_data.right_trigger_value
-            elif args.ee == 'gripper' and args.xr_mode == 'hand':
-                with left_gripper_value.get_lock():
-                    left_gripper_value.value = tele_data.left_pinch_value
-                with right_gripper_value.get_lock():
-                    right_gripper_value.value = tele_data.right_pinch_value
-            else:
-                pass        
+            # tele_data = tv_wrapper.get_motion_state_data()
+            # if (args.ee == 'dex3' or args.ee == 'inspire1') and args.xr_mode == 'hand':
+            #     with left_hand_pos_array.get_lock():
+            #         left_hand_pos_array[:] = tele_data.left_hand_pos.flatten()
+            #     with right_hand_pos_array.get_lock():
+            #         right_hand_pos_array[:] = tele_data.right_hand_pos.flatten()
+            # elif args.ee == 'gripper' and args.xr_mode == 'controller':
+            #     with left_gripper_value.get_lock():
+            #         left_gripper_value.value = tele_data.left_trigger_value
+            #     with right_gripper_value.get_lock():
+            #         right_gripper_value.value = tele_data.right_trigger_value
+            # elif args.ee == 'gripper' and args.xr_mode == 'hand':
+            #     with left_gripper_value.get_lock():
+            #         left_gripper_value.value = tele_data.left_pinch_value
+            #     with right_gripper_value.get_lock():
+            #         right_gripper_value.value = tele_data.right_pinch_value
+            # else:
+            #     pass        
             
             # high level control
             # if args.xr_mode == 'controller' and args.motion:
@@ -409,13 +367,13 @@ if __name__ == '__main__':
         # arm_ctrl.ctrl_dual_arm_go_home()
         # if args.sim:
         #     sim_state_subscriber.stop_subscribe()
-        tv_img_shm.close()
-        tv_img_shm.unlink()
-        if WRIST:
-            wrist_img_shm.close()
-            wrist_img_shm.unlink()
-        if args.record:
-            recorder.close()
+        # tv_img_shm.close()
+        # tv_img_shm.unlink()
+        # if WRIST:
+        #     wrist_img_shm.close()
+        #     wrist_img_shm.unlink()
+        # if args.record:
+        #     recorder.close()
         listen_keyboard_thread.join()
         logger_mp.info("Finally, exiting program...")
         exit(0)
