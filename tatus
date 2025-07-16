@@ -1,0 +1,89 @@
+[33m7502469[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m When using git, tele is a reference, and it might have been modified or deleted after re-submission.
+[33m91177e9[m It is not the minimal version, no content has been deleted, only comments are included.
+[33m89bcb56[m Atom_xr01
+[33m1388d33[m [fix] bug.
+[33mc43facb[m Merge pull request #66 from unitreerobotics/newVuer
+[33m0e4a287[m[33m ([m[1;31morigin/newVuer[m[33m)[m [fix] minor issue
+[33m1abb9d9[m [fix] minor issue
+[33mff9e53e[m [big release] Please refer README: Release Note
+[33m39b64fa[m [fix] minor issue
+[33mc346a63[m add 'default=gripper' and update tpoic
+[33m557908c[m merage
+[33m7c1455c[m update episode_writer ,add sim_state
+[33m375cdc2[m [fix] minor issue for sim.
+[33m1173549[m [fix] var name bug
+[33ma40056f[m [update] Optimize go home experience.
+[33m2716c0e[m [fix] sshkeyboard's related issue
+[33m64c01a7[m [update] support inspire1 DexPilot algorithm.
+[33m7d91cfb[m [update] support dex3 DexPilot algorithm.
+[33maee701f[m [fix] bug
+[33m124647d[m [update] a good vuer version 0.0.60.
+[33m742460a[m [fix] minor issues
+[33m0ad5732[m [update] Add DDS communication support for simulation object position resetting
+[33mae1cf8a[m [update] Enable unitree_sim_isaaclab simulation environment support
+[33m5b6f852[m [fix] bug.
+[33m58dbbf8[m [fix] log
+[33m6cc44d3[m [update] headless mode (use sshkeyboard lib) for ssh or no screen environment.
+[33me70c1af[m [fix] type bug.
+[33md9d2812[m [fix] uncomment codes.
+[33m62a3c03[m [fix] requirements
+[33m4c554b0[m [update] print to logging_mp.
+[33m13b384f[m [fix] make var names consistent
+[33mc0cc780[m [fix] bug
+[33m7d65da4[m [fix] bug.
+[33me62af5a[m [fix] hide hand marker visualization
+[33m85ffd6b[m [update] optimize interface
+[33m275ebde[m [update] under main operation control, teleoperate and record.
+[33m7c38504[m [fix] type bug.
+[33m0e9918f[m [update] support new vuer version
+[33m728ffa0[m [fix] missing lock issue.
+[33m46494a2[m [fix] bug
+[33m283251f[m [update] readme
+[33m02d9d2b[m [update ] Readme
+[33m99ca94c[m [fix] upload jpg
+[33mf492e36[m [update] support h1 and inspire hand
+[33m1a25ee0[m [update] support g1-23 dof
+[33m20633f6[m [fix] complete dependencies.
+[33mf412721[m [update] upgrade dex-retargeting, now this repo can run arm architecture
+[33m6a667c6[m [update] README
+[33m012fd88[m [fix] args bug.
+[33m2596b1a[m [fix] small bugs.
+[33mcd2e746[m [update] support h1_2 in g1 branch.
+[33mb02447c[m [fix] ctrl dual arm go home bug.
+[33m3dc4278[m [update] data recording using multithread: .json
+[33ma25d22c[m [update] add ctrl_dual_arm_go_home function
+[33m0b598c1[m [update] README
+[33mb56711f[m [update] 1. Data recording using multithreading (.json not yet implemented) 2. Optimize rerun (not fully implemented yet).
+[33mf7bdf9c[m [update] 1. upgrade URDF 2. fix kp/kd bug 3. support new dex3 hand
+[33m6697411[m [update] 1. new image server 2. support gripper 3. rerun_visualizer
+[33mdcb420c[m Merge pull request #12 from eltociear/add-japanese-readme
+[33mfb9ad3d[m docs: add Japanese README
+[33m8a2bf9b[m [update] README render.
+[33m6cb458b[m [Upload] some images.
+[33m4965e84[m [update] README
+[33mab923c6[m [Release] v1.0 : new local image server, README, etc. for g1(29DoF)
+[33m51055b5[m [update] README
+[33m287c69b[m [update] README and image show related.
+[33m04c146e[m [update] 1. discard temp dds 2.mono|bino camera support 3. optim hand_unitree 4. more comments
+[33m70e6a77[m [upload] add video_cover image.
+[33m5537cd7[m [update] update README and support chinese.
+[33mf05bf47[m [release] major version update for g1 : code refactoring and optimization, etc
+[33macecfc1[m [update] add joint smooth func to ik.
+[33m716bad4[m [optim] optim g1 ik
+[33mda2e481[m [optim] adjust optim factors.
+[33mfdc8dd4[m [fix] fix constants matrixs bug.
+[33mbd0c696[m [fix] delete h1 related code.
+[33m68549a7[m g1(7 DoF arm) IK test.
+[33m8854cea[m [update] fill wrist pose rotation with identity matrix for 4 Dof arm ik.
+[33m7c87c51[m h1(4 DoF arm) IK test.
+[33m82b6306[m [update] README
+[33m66e1b7a[m [detele] legacy:robot_arm_tem [fix] dds:robot_arm
+[33maec4d74[m [fix] robot_arm.py
+[33m00ad6ea[m [update] README [fix] teleop/
+[33m232dd28[m [update] README
+[33m566a2fb[m [update] README
+[33mf177f68[m [update] README
+[33md5346ed[m [update] URDF related and README
+[33m5dc15fe[m [update] README
+[33mf9a8095[m [update] README and LICENSE
+[33mb990c0e[m Init commit

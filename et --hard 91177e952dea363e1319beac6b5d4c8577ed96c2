@@ -1,0 +1,287 @@
+[33mcommit 7502469e5bd51395f8b69aaa56b7891f73e3f345[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: luo1imasi <2488288779@qq.com>
+Date:   Thu Jul 10 14:33:03 2025 +0800
+
+    When using git, tele is a reference, and it might have been modified or deleted after re-submission.
+
+[33mcommit 91177e952dea363e1319beac6b5d4c8577ed96c2[m
+Author: luo1imasi <2488288779@qq.com>
+Date:   Thu Jul 10 12:38:25 2025 +0800
+
+    It is not the minimal version, no content has been deleted, only comments are included.
+
+[33mcommit 89bcb56b13b793515671c81e506ea67cb16e9071[m
+Author: luo1imasi <2488288779@qq.com>
+Date:   Wed Jul 9 18:06:01 2025 +0800
+
+    Atom_xr01
+
+[33mcommit 1388d3311af2468dc228b68b82fc4d7456b005f6[m
+Author: silencht <silencht@qq.com>
+Date:   Tue Jul 8 15:55:03 2025 +0800
+
+    [fix] bug.
+
+[33mcommit c43facb0439d6c9b96798b8f4b899e03bcf3fa9f[m
+Merge: 728ffa0 0e4a287
+Author: silencht <silencht@qq.com>
+Date:   Mon Jul 7 18:07:32 2025 +0800
+
+    Merge pull request #66 from unitreerobotics/newVuer
+    
+    New vuer
+
+[33mcommit 0e4a287a8ca18d6c8e8617a34556e1ebf6078692[m[33m ([m[1;31morigin/newVuer[m[33m)[m
+Author: silencht <silencht@qq.com>
+Date:   Mon Jul 7 18:06:38 2025 +0800
+
+    [fix] minor issue
+
+[33mcommit 1abb9d95b84adae363442f3d8092f7978fde9e76[m
+Author: silencht <silencht@qq.com>
+Date:   Mon Jul 7 17:55:24 2025 +0800
+
+    [fix] minor issue
+
+[33mcommit ff9e53ebcb9d909d2282957212865d96ee9f1fd6[m
+Author: silencht <silencht@qq.com>
+Date:   Mon Jul 7 16:11:57 2025 +0800
+
+    [big release] Please refer README: Release Note
+
+[33mcommit 39b64fafa05a377f2a8e20f57015e7cb3bd27380[m
+Author: silencht <silencht@qq.com>
+Date:   Fri Jul 4 20:43:19 2025 +0800
+
+    [fix] minor issue
+
+[33mcommit c346a63734e855f0bad7c5e9a53a9ad0004f99d1[m
+Author: wei.li <rd_liwei@unitree.com>
+Date:   Fri Jul 4 09:55:06 2025 +0800
+
+    add 'default=gripper' and update tpoic
+
+[33mcommit 557908cc8b1d1ee302b10be4c012401dcf9e9bc1[m
+Merge: 7c1455c 375cdc2
+Author: wei.li <rd_liwei@unitree.com>
+Date:   Fri Jul 4 09:50:54 2025 +0800
+
+    merage
+
+[33mcommit 7c1455c7fb970cdc3bafda9fda32cde4eda057b7[m
+Author: wei.li <rd_liwei@unitree.com>
+Date:   Fri Jul 4 09:34:10 2025 +0800
+
+    update episode_writer ,add sim_state
+
+[33mcommit 375cdc27605de377c698e2b89cad0e5885724ca6[m
+Author: silencht <silencht@qq.com>
+Date:   Tue Jul 1 11:00:08 2025 +0800
+
+    [fix] minor issue for sim.
+
+[33mcommit 1173549d3c1b83f2f756e668a165ca43e3b26ebe[m
+Author: silencht <silencht@qq.com>
+Date:   Tue Jul 1 10:15:00 2025 +0800
+
+    [fix] var name bug
+
+[33mcommit a40056f7d498f8c749ba5e67eba453ba8094b3a6[m
+Author: silencht <silencht@qq.com>
+Date:   Mon Jun 30 17:55:14 2025 +0800
+
+    [update] Optimize go home experience.
+
+[33mcommit 2716c0e7094e7efc0d9b0fdc26fc1e5652ea3bf7[m
+Author: silencht <silencht@qq.com>
+Date:   Mon Jun 30 15:17:53 2025 +0800
+
+    [fix] sshkeyboard's related issue
+
+[33mcommit 64c01a71eee9d5ff88aaf6f7b2a18ef62de1f380[m
+Author: silencht <silencht@qq.com>
+Date:   Mon Jun 30 11:32:35 2025 +0800
+
+    [update] support inspire1 DexPilot algorithm.
+
+[33mcommit 7d91cfb6b89c37e1b754dbf6300785787eeeaf7c[m
+Author: silencht <silencht@qq.com>
+Date:   Thu Jun 26 20:53:02 2025 +0800
+
+    [update] support dex3 DexPilot algorithm.
+
+[33mcommit aee701fdf813e24524d0a60d37691079851bbaa2[m
+Author: silencht <silencht@qq.com>
+Date:   Thu Jun 26 16:11:38 2025 +0800
+
+    [fix] bug
+
+[33mcommit 124647dfd435d69c4800250ec8026d44e2258b03[m
+Author: silencht <silencht@qq.com>
+Date:   Thu Jun 26 12:19:14 2025 +0800
+
+    [update] a good vuer version 0.0.60.
+
+[33mcommit 742460a7d5d4eb37894cb2026e73161e758cee45[m
+Author: silencht <silencht@qq.com>
+Date:   Thu Jun 26 11:41:48 2025 +0800
+
+    [fix] minor issues
+
+[33mcommit 0ad5732966e8c40efd142caf0aa3c35ee9aa6a48[m
+Author: wei.li <rd_liwei@unitree.com>
+Date:   Mon Jun 23 20:55:38 2025 +0800
+
+    [update] Add DDS communication support for simulation object position resetting
+
+[33mcommit ae1cf8a1750a87302e1d417dbb4f35d022e96996[m
+Author: wei.li <rd_liwei@unitree.com>
+Date:   Mon Jun 23 20:12:17 2025 +0800
+
+    [update] Enable unitree_sim_isaaclab simulation environment support
+
+[33mcommit 5b6f852335f96a4241c2c9c95e84f49f18313521[m
+Author: silencht <silencht@qq.com>
+Date:   Wed Jun 18 12:03:44 2025 +0800
+
+    [fix] bug.
+
+[33mcommit 58dbbf8cebb2ec68e37cbd3f5cd1f5888da8b917[m
+Author: silencht <silencht@qq.com>
+Date:   Tue Jun 17 11:31:36 2025 +0800
+
+    [fix] log
+
+[33mcommit 6cc44d31926d4de248e4df966d3f59455024594d[m
+Author: silencht <silencht@qq.com>
+Date:   Tue Jun 17 10:52:34 2025 +0800
+
+    [update] headless mode (use sshkeyboard lib) for ssh or no screen environment.
+
+[33mcommit e70c1afecf754445f8433fc40c5eeba7e23ea12b[m
+Author: silencht <silencht@qq.com>
+Date:   Tue Jun 10 20:12:46 2025 +0800
+
+    [fix] type bug.
+
+[33mcommit d9d28120e901f52a03d85c97a45542cea2b82020[m
+Author: silencht <silencht@qq.com>
+Date:   Tue Jun 10 17:54:48 2025 +0800
+
+    [fix] uncomment codes.
+
+[33mcommit 62a3c036a0b93444b03d86dc4bb4fa5140e32eaf[m
+Author: silencht <silencht@qq.com>
+Date:   Tue Jun 10 17:51:25 2025 +0800
+
+    [fix] requirements
+
+[33mcommit 4c554b0cd3605c2e69afcacbdb0741ca1aa54f66[m
+Author: silencht <silencht@qq.com>
+Date:   Tue Jun 10 17:46:20 2025 +0800
+
+    [update] print to logging_mp.
+
+[33mcommit 13b384f86197c0d49d5ced376bb02286cc7882ec[m
+Author: silencht <silencht@qq.com>
+Date:   Tue May 27 10:09:50 2025 +0800
+
+    [fix] make var names consistent
+
+[33mcommit c0cc780ba9dc870d8ced39bb009469726a07ce91[m
+Author: silencht <silencht@qq.com>
+Date:   Thu May 22 20:55:25 2025 +0800
+
+    [fix] bug
+
+[33mcommit 7d65da46345ddb90f1f9c1fad0ec22da7bf215ce[m
+Author: silencht <silencht@qq.com>
+Date:   Thu May 22 18:05:39 2025 +0800
+
+    [fix] bug.
+
+[33mcommit e62af5a152ff7a233175e4d1ed96fff83b41445b[m
+Author: silencht <silencht@qq.com>
+Date:   Wed May 21 17:16:52 2025 +0800
+
+    [fix] hide hand marker visualization
+
+[33mcommit 85ffd6b8de4e3a60dba97be2a301ec5e34e411fd[m
+Author: silencht <silencht@qq.com>
+Date:   Wed May 21 15:16:12 2025 +0800
+
+    [update] optimize interface
+
+[33mcommit 275ebdeacf2de9df3bfb5792f37bca07a1730876[m
+Author: silencht <silencht@qq.com>
+Date:   Mon May 19 12:10:29 2025 +0800
+
+    [update] under main operation control, teleoperate and record.
+
+[33mcommit 7c3850451e4f9c1b85eedfaaea53e3603fa9b13e[m
+Author: silencht <silencht@qq.com>
+Date:   Wed May 14 17:50:42 2025 +0800
+
+    [fix] type bug.
+
+[33mcommit 0e9918f937ed56a3da44bfbbe98b68af349542a4[m
+Author: silencht <silencht@qq.com>
+Date:   Wed May 14 14:36:56 2025 +0800
+
+    [update] support new vuer version
+
+[33mcommit 728ffa0f9ff309e52f5cfbc16fea5e5c0e146785[m
+Author: silencht <silencht@qq.com>
+Date:   Wed Apr 30 09:44:10 2025 +0800
+
+    [fix] missing lock issue.
+
+[33mcommit 46494a2787fb4fb5c3a92167300106ac586d0297[m
+Author: silencht <silencht@qq.com>
+Date:   Tue Apr 29 20:19:04 2025 +0800
+
+    [fix] bug
+
+[33mcommit 283251f823dd53d8927324b13d447163c6ab0824[m
+Author: silencht <silencht@qq.com>
+Date:   Fri Apr 25 14:37:29 2025 +0800
+
+    [update] readme
+
+[33mcommit 02d9d2bcd9f661ecbd18f43ed433da16e9606e4b[m
+Author: silencht <silencht@qq.com>
+Date:   Fri Apr 25 12:20:44 2025 +0800
+
+    [update ] Readme
+
+[33mcommit 99ca94c9b4b62839c70dba392f9ad8c1eacf0433[m
+Author: silencht <silencht@qq.com>
+Date:   Thu Apr 24 15:58:48 2025 +0800
+
+    [fix] upload jpg
+
+[33mcommit f492e360b578297ae4f008b85c5ab30411d21fea[m
+Author: silencht <silencht@qq.com>
+Date:   Thu Apr 24 15:34:05 2025 +0800
+
+    [update] support h1 and inspire hand
+
+[33mcommit 1a25ee0d49e0cd604f11c6227d6e35df4cd7dd4a[m
+Author: silencht <silencht@qq.com>
+Date:   Wed Apr 2 12:01:39 2025 +0800
+
+    [update] support g1-23 dof
+
+[33mcommit 20633f692d3b6d985ab12cb038cb05e817eabfe3[m
+Author: silencht <silencht@qq.com>
+Date:   Sat Feb 8 20:00:59 2025 +0800
+
+    [fix] complete dependencies.
+
+[33mcommit f41272134de08d8c23476824fca173d3b2f91707[m
+Author: silencht <silencht@qq.com>
+Date:   Sat Feb 8 15:08:03 2025 +0800
+
+    [update] upgrade dex-retargeting, now this repo can run arm architecture
+
+[33mcommit 6a667c6057ecad34a348c
